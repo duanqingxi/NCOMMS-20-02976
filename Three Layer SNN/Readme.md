@@ -2,7 +2,7 @@
 
 ## Dataset
 
-MNIST handwritten dataset has been included in ./MNIST folder
+MNIST handwritten dataset will be included in ./MNIST folder after you run the program
 
 
 
