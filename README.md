@@ -10,3 +10,9 @@ Duan, Q.X. et al. Spiking Neuron with Spatiotemporal Dynamics and Gain Modualati
 Authors: Qingxi Duan
 
 Advisors: Prof.Yuchao Yang(Email: yuchaoyang@pku.edu.cn)
+# System requirement
+Smiulation 1-show in the three-layer SNN forder
+
+Simulation 2
+
+Simulation 3-show in the RF remapping with gain modulation
