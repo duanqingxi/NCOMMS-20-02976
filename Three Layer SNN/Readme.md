@@ -22,7 +22,7 @@ Users are supposed to install the libraries mentioned above, then open the repos
 
 ## Demo
 
-The program will first download the MNIST dataset if you do not copy the ./MNIST folder to your current work directory.
+The program will first download the MNIST dataset if you do not have the MNIST data in your current work directory.
 
 Then the training process starts, it will print the loss, training accuracy and validation accuracy every epoch, like:
 
@@ -58,7 +58,7 @@ Users can change the simulation parameters by manually set the parameter value i
 
 ## License
 
-[MIT] © Zhaokun Jing
+[MIT](https://github.com/duanqingxi/NCOMMS-20-02976/blob/master/LICENSE) © Zhaokun Jing
 
 
 
