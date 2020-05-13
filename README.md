@@ -13,7 +13,7 @@ Advisors: Prof.Yuchao Yang(Email: yuchaoyang@pku.edu.cn)
 # SYSTEM REQUIREMENT
 Smiulation 1-show in the THREE-layer SNN forder
 
-Simulation 2
+Simulation 2-show in the coincidence detection forder
 
 Simulation 3-show in the RF remapping with gain modulation forder
 
