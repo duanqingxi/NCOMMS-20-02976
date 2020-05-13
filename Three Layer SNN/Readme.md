@@ -30,7 +30,7 @@ Then the training process starts, it will print the loss, training accuracy and 
 
 Those training results will be written to a training_log.txt file, every row in the .txt file is the training results of one epoch, it seems like:
 
-`0     2.171238    0.2757    0.5247`
+`0     2.171238    0.2757    0.5247` 
 `1     2.175548    0.5213    0.5742`    
 `2     2.122161    0.5596    0.6931` 
 
