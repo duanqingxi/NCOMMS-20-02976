@@ -8,7 +8,7 @@
 
    Installation is not needed.
 
-3 Demo
+3 Demo/Instruction for use
 
 (1) activation_func_fitting.py is used to fitting the parameters of a memristive neuron's
     activation function.
