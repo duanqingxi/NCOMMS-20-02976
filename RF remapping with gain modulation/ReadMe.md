@@ -1,13 +1,13 @@
-# System requirements
+System requirements
 
 (1) python
 (2) python packages (matplotlib, spicy)
 
-# Installation guide
+Installation guide
 
    Installation is not needed.
 
-# Demo
+Demo
 
 (1) activation_func_fitting.py is used to fitting the parameters of a memristive neuron's
     activation function.
