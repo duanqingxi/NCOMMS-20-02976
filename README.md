@@ -11,26 +11,26 @@ Authors: Qingxi Duan
 
 Advisors: Prof.Yuchao Yang(Email: yuchaoyang@pku.edu.cn)
 # SYSTEM REQUIREMENT
-Smiulation 1-show in the THREE-layer SNN forder
+Smiulation 1-show in the Three-layer SNN forder
 
 Simulation 2-show in the coincidence detection forder
 
 Simulation 3-show in the RF remapping with gain modulation forder
 
 # INSTALLATION GUIDE
-Smiulation 1-show in the THREE-layer SNN forder
+Smiulation 1-show in the Three-layer SNN forder
 
 Simulation 2-show in the coincidence detection forder
 
 Simulation 3-show in the RF remapping with gain modulation forder
 # DEMO
-Smiulation 1-show in the THREE-layer SNN forder
+Smiulation 1-show in the Three-layer SNN forder
 
 Simulation 2-show in the coincidence detection forder
 
 Simulation 3-show in the RF remapping with gain modulation forder
 # INSTRUCTIONS
-Smiulation 1-show in the THREE-layer SNN forder
+Smiulation 1-show in the Three-layer SNN forder
 
 Simulation 2-show in the coincidence detection forder
 
