@@ -3,13 +3,13 @@ Duan, Q.X. et al. Spiking Neuron with Spatiotemporal Dynamics and Gain Modualati
 
 1-The python framework to train and test the 3-layer SNN to realize the task of hand-write digit recognition with MNIST database.
 
-2-The maltab framework to realize the coincidence detection
+2-The python and maltab framework to realize the coincidence detection
 
 3-The python framework to realize RF remapping with gain modulation 
 # Contributions
 Authors: Qingxi Duan
 
-Advisors: Prof.Yuchao Yang(Email: yuchaoyang@pku.edu.cn)
+Advisors: Prof.Yuchao Yang(Email: yuchaoyang@pku.edu.cn), Prof.Huang Ru(Email: ruhaung@pku.edu.cn)
 # SYSTEM REQUIREMENT
 Smiulation 1-show in the Three-layer SNN forder
 
