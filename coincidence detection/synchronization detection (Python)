@@ -1,0 +1,86 @@
+#The purpose of this code is to test the large-scale synchronization detection ability of artificial neurons based on memristor. 
+#The model of artificial neurons are extract from experimental data.
+#The theoretical computation model is based on the work of Rossant C. et al in 2011 with the help of Brian2 simulator.
+
+#install Brian2
+conda install -c conda-forge brian2
+
+from brian2 import * 
+import numpy as np 
+import matplotlib.pyplot as plt
+
+# neuron parameters. 
+# Parameters with time are all amplified in the following simulation to ensure minimun runing time step in simulator (0.1*ms) wouldn't affect the performance of actual device model. 
+v0 = 950*mV # threshold
+taum = 0.4608*ms # time constant
+taue = 0.3*ms
+taui = 1*ms
+eqs = Equations("""
+                dv/dt  = (ge+gi-(v))/taum : volt
+                dge/dt = -ge/taue : volt
+                dgi/dt = -gi/taui : volt
+                """) # LIF neuron model
+
+# synapse parameters
+we = 136.8*mV
+wi = -134.2*mV
+
+# NeuronGroup definition
+group = NeuronGroup(N=2, model=eqs, reset='v = 0*mV', threshold='v>v0', refractory=0*ms, method='exact')
+group.v = 0
+group.ge = group.gi = 0
+
+# plot fitted LIF neuron's response curve. 
+x = np.linspace(0.8,1.4,600)
+y = np.zeros((600))
+for i in range(151,600,1):
+    y[i]=1/(0.4608*log(x[i]/(x[i]-0.95)))
+plt.figure()
+plot(x,y)
+title("Fitted LIF neuron")
+plt.xlabel('Voltage /V')
+plt.ylabel('Frequency /MHz')
+
+# input parameters
+p = 15 # the number of synchronous inputs
+ne = 4000 # the number of E inputs
+ni = 1000 # the number of I inputs
+lambdac = 400*Hz # the f of synchronous inputs
+lambdae = lambdai = 10*Hz #the f of Possion inputs
+
+# independent E/I Poisson inputs
+p1 = PoissonInput(group[0:1], 'ge', N=ne, rate=lambdae, weight=we)
+p2 = PoissonInput(group[0:1], 'gi', N=ni, rate=lambdai, weight=wi)
+
+# independent E/I Poisson inputs + synchronous E events
+p3 = PoissonInput(group[1:], 'ge', N=ne, rate=lambdae-(p*1.0/ne)*lambdac, weight=we)
+p4 = PoissonInput(group[1:], 'gi', N=ni, rate=lambdai, weight=wi)
+p5 = PoissonInput(group[1:], 'ge', N=1, rate=lambdac, weight=p*we)
+
+# run 
+M = SpikeMonitor(group)
+SM = StateMonitor(group, 'v', record=True)
+BrianLogger.log_level_info()
+run(0.1*second)
+
+# plot trace and spikes
+
+spikes = (M.t[M.i == 0] - defaultclock.dt)/ms
+Membrane = SM[0].v
+plt.figure()
+plot(SM.t/ms, Membrane)
+title("%s: %d spikes/second" % ("uncorrelated inputs", M.count[0]))
+plt.xlabel('Time /us')
+plt.ylabel('Membrane potential /V')
+print(Membrane)
+print(tile(spikes,(1,1)))
+    
+spikes = (M.t[M.i == 1] - defaultclock.dt)/ms
+val = SM[1].v
+plt.figure()
+plot(SM.t/ms, val)
+title("%s: %d spikes/second" % ("correlated inputs", M.count[1]))
+plt.xlabel('Time /us')
+plt.ylabel('Membrane potential /V')
+print(Membrane)
+print(tile(spikes,(1,1)))
