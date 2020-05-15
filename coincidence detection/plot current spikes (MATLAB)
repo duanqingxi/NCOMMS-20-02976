@@ -508,11 +508,11 @@ t=(0:0.1:99.9);
 figure(1);
 subplot(2,1,1);plot(t,a);
 xlabel("time /us")
-ylabel("Membrane Potential /V")
+ylabel("Membrane Potential /mV")
 title("uncorrelated inputs")
 subplot(2,1,2);plot(t,b);
 xlabel("time /us")
-ylabel("Membrane Potential /V")
+ylabel("Membrane Potential /mV")
 title("correlated inputs")
 % spike count and timing
 xxa=[63.4,95.8];xa=1;
@@ -551,4 +551,4 @@ subplot(2,1,2);plot(t,bb);
 xlabel("time /us")
 ylabel("Current /mA")
 title("correlated inputs: 21 spikes")
-axis([0 100,-0.3,1])
+axis([0 100,-0.3,1]) 
