@@ -38,11 +38,11 @@ A 1000*1 data represents the membrane potential during operation time(100 us). T
 Another data recodes the time of each spike firing. 
 
  
-Figure 1 represents the membrane potential during operation time when input is uncorrelated.
-Figure 1.png
-Figure 2 represents the membrane potential during operation time when input is correlated.
+Figure 1 represents the membrane potential during operation time when input is uncorrelated （as shown in Figure 1.png).
 
-Figure 1 represents LIF neuron's response curve, whose parameters are extracted from the experiments.
+Figure 2 represents the membrane potential during operation time when input is correlated（as shown in Figure 2.png).
+
+Figure 1 represents LIF neuron's response curve, whose parameters are extracted from the experiments（as shown in Figure 3.png).
 
 Because the input is a Poisson input with randomness, there will be some differences in results from run to run. 
 
