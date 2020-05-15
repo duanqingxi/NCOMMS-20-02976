@@ -37,9 +37,12 @@ The expected output includes data and three figures.
 A 1000*1 data represents the membrane potential during operation time(100 us). The sampling interval is 0.1us.
 Another data recodes the time of each spike firing. 
 
-Figure 1 represents LIF neuron's response curve, whose parameters are extracted from the experiments. 
-Figure 2 represents the membrane potential during operation time when input is uncorrelated.
-Figure 3 represents the membrane potential during operation time when input is correlated.
+ 
+Figure 1 represents the membrane potential during operation time when input is uncorrelated.
+Figure 1.png
+Figure 2 represents the membrane potential during operation time when input is correlated.
+
+Figure 1 represents LIF neuron's response curve, whose parameters are extracted from the experiments.
 
 Because the input is a Poisson input with randomness, there will be some differences in results from run to run. 
 
