@@ -1,14 +1,16 @@
-1 System requirements
+## RF remapping with gain modulation
 
-(1) python
+## System requirements
 
-(2) python packages (matplotlib, spicy)
++ python
 
-2 Installation guide
++ python packages (matplotlib, spicy)
+
+## Installation guide
 
    Installation is not needed.
 
-3 Demo/Instructions for use
+## Demo/Instructions for use
 
 (1) activation_func_fitting.py is used to fitting the parameters of a memristive neuron's
     activation function.
